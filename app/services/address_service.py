@@ -59,17 +59,15 @@ def update_address(db:Session, address_id: int, payload: AddressUpdate) -> Addre
         return None
     
     try:
-        for field, value in payload.dict().items():
+        for field, value in payload.model_dump(exclude_unset=True).items():
             setattr(address, field, value)
 
         db.commit()
         db.refresh(address)
-
-
+        return address
     except SQLAlchemyError as e:
         db.rollback()
         raise   
-
 
 def delete_address(db:Session, address_id: int) -> None:
 
