@@ -41,4 +41,4 @@ def delete_address(address_id: int, db: Session = Depends(get_db)):
 def search_addresses(latitude: float  = Query(..., ge=-90,  le=90,  description="Center point latitude"),
     longitude: float = Query(..., ge=-180, le=180, description="Center point longitude"),
     distance_km: float = Query(..., gt=0, description="Search radius in kilometres"), db: Session = Depends(get_db)):
-    return address_service.search_addresses(db, latitude, longitude, distance_km)
+    return address_service.find_nearby_addresses(db, latitude, longitude, distance_km)
