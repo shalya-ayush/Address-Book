@@ -60,7 +60,7 @@ def update_address(db:Session, address_id: int, payload: AddressUpdate) -> Addre
     
     try:
         for field, value in payload.dict().items():
-        setattr(address, field, value)
+            setattr(address, field, value)
 
         db.commit()
         db.refresh(address)
@@ -89,7 +89,7 @@ def find_nearby_addresses(db:Session, latitude: float, longitude: float, radius_
 
     addresses = db.query(Address).all()
     nearby_addresses = []
-    
+
     for address in addresses:
         distance = _haversine(latitude, longitude, address.latitude, address.longitude)
         if distance <= radius_km:

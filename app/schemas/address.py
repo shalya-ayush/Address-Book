@@ -1,6 +1,6 @@
-from pydantic import BaseField, Field
+from pydantic import BaseModel, Field
 
-class AddressBase(BaseField):
+class AddressBase(BaseModel):
     name: str      = Field(..., min_length=1, max_length=100, example="Home")
     street: str    = Field(..., min_length=1, max_length=200, example="123 MG Road")
     city: str      = Field(..., min_length=1, max_length=100, example="Mumbai")
