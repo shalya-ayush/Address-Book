@@ -23,7 +23,7 @@ This API allows users to:
 ### 1. Clone the Repository
 
 ```
-git clone https://github.com/YOUR_USERNAME/address-book-api.git
+git clone https://github.com/shalya-ayush/Address-Book.git
 cd address_book
 ```
 ### 2. Create Virtual Environment
