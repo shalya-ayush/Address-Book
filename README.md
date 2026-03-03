@@ -1,3 +1,4 @@
+# Address Book API
 A simple Address Book REST API built with FastAPI, SQLAlchemy, and SQLite.
 
 This API allows users to:
@@ -8,7 +9,7 @@ This API allows users to:
 - Retrieve addresses
 - Find nearby addresses within a given distance
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - FastAPI
 - SQLAlchemy
@@ -17,7 +18,7 @@ This API allows users to:
 - Uvicorn
 
 
-## Setup Instructions
+## ⚙️ Setup Instructions
 
 ### 1. Clone the Repository
 
@@ -60,6 +61,6 @@ uvicorn app.main:app --reload
 http://127.0.0.1:8000/
 ```
 
-## Author
+## 👨‍💻Author
 
 Ayush Shalya
